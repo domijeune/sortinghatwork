@@ -2,181 +2,41 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>Bradavický test – pracovní styl</title>
-    <style>
-        body { font-family: 'Segoe UI', sans-serif; padding: 30px; background-color: #f5f5f5; color: #333; }
-        h1 { color: #4b4b9f; }
-        .question { margin-top: 20px; }
-        label { display: block; margin: 5px 0; }
-        button { margin-top: 30px; padding: 10px 20px; font-size: 16px; }
-        #result { margin-top: 30px; font-size: 18px; white-space: pre-wrap; }
-    </style>
+  <meta charset="UTF-8">
+  <title>Bradavický pracovní test (20 otázek)</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; padding: 30px; background-color: #f5f5f5; color: #333; }
+    h1 { color: #4b4b9f; }
+    .question { margin-top: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 30px; padding: 10px 20px; font-size: 16px; }
+    #result { margin-top: 30px; font-size: 18px; white-space: pre-wrap; }
+  </style>
 </head>
 <body>
-    <h1>🧙‍♀️ Bradavický pracovní test (20 otázek)</h1>
-    <form id="quizForm">
+  <h1>🧙‍♀️ Bradavický pracovní test (20 otázek)</h1>
+  <form id="quizForm">
+<div class="question"><strong>1. Když se tým dostane do chaosu, co uděláš?</strong><br><label><input type="radio" name="q1" value="gryffindor"> Jdu to zachránit. Bez váhání.</label><label><input type="radio" name="q1" value="ravenclaw"> Analyzuju situaci a navrhnu strukturu.</label><label><input type="radio" name="q1" value="slytherin"> Zvážím, co z toho můžu vytěžit.</label><label><input type="radio" name="q1" value="hufflepuff"> Pomůžu tam, kde je to nejvíc potřeba, klidně potichu.</label></div>
+<div class="question"><strong>2. Tvůj styl psaní e-mailů:</strong><br><label><input type="radio" name="q2" value="gryffindor"> Rychlé, stručné, rovnou k věci.</label><label><input type="radio" name="q2" value="ravenclaw"> Pečlivě formulované, s odrážkami a zdroji.</label><label><input type="radio" name="q2" value="slytherin"> Laskavě manipulativní s cílem.</label><label><input type="radio" name="q2" value="hufflepuff"> Milé, přátelské, někdy až moc zdvořilé.</label></div>
+<div class="question"><strong>3. Co tě nejvíc frustruje v týmu?</strong><br><label><input type="radio" name="q3" value="gryffindor"> Pasivita a nerozhodnost.</label><label><input type="radio" name="q3" value="ravenclaw"> Nelogické postupy a chaos.</label><label><input type="radio" name="q3" value="slytherin"> Když ostatní nevidí svůj potenciál.</label><label><input type="radio" name="q3" value="hufflepuff"> Nedostatek podpory nebo fair play.</label></div>
+<div class="question"><strong>4. Když kolega nedodrží deadline:</strong><br><label><input type="radio" name="q4" value="gryffindor"> Řeknu mu to natvrdo.</label><label><input type="radio" name="q4" value="ravenclaw"> Navrhnu způsob, jak to příště zvládnout.</label><label><input type="radio" name="q4" value="slytherin"> Zapamatuju si to a přizpůsobím taktiku.</label><label><input type="radio" name="q4" value="hufflepuff"> Pomůžu mu to dokončit a pak to s ním proberu.</label></div>
+<div class="question"><strong>5. Kdy jsi nejvíc ve svém živlu?</strong><br><label><input type="radio" name="q5" value="gryffindor"> Když je krize a nikdo jiný neví, co dělat.</label><label><input type="radio" name="q5" value="ravenclaw"> Když mám klid na hlubokou práci.</label><label><input type="radio" name="q5" value="slytherin"> Když můžu řídit věci podle sebe.</label><label><input type="radio" name="q5" value="hufflepuff"> Když panuje dobrá nálada a tým drží pohromadě.</label></div>
+<div class="question"><strong>6. Jak reaguješ na nejasné zadání?</strong><br><label><input type="radio" name="q6" value="gryffindor"> Vrhnu se na to, nějak to dopadne.</label><label><input type="radio" name="q6" value="ravenclaw"> Ptám se, píšu si poznámky, tvořím rámec.</label><label><input type="radio" name="q6" value="slytherin"> Najdu skulinu, kde to otočit ve svůj prospěch.</label><label><input type="radio" name="q6" value="hufflepuff"> Zkouším, testuju, a pak konzultuju s kolegy.</label></div>
+<div class="question"><strong>7. Tvoje reakce na kritiku?</strong><br><label><input type="radio" name="q7" value="gryffindor"> Bráním se, ale pak ji zvážím.</label><label><input type="radio" name="q7" value="ravenclaw"> Zanalyzuju, jestli má pravdu.</label><label><input type="radio" name="q7" value="slytherin"> Použiju ji jako palivo pro další krok.</label><label><input type="radio" name="q7" value="hufflepuff"> Vezmu si ji k srdci a snažím se zlepšit.</label></div>
+<div class="question"><strong>8. Když někdo přebere tvůj nápad:</strong><br><label><input type="radio" name="q8" value="gryffindor"> Řeknu to nahlas.</label><label><input type="radio" name="q8" value="ravenclaw"> Zasměju se, ale vím, že byl můj.</label><label><input type="radio" name="q8" value="slytherin"> Připíšu si zásluhu oklikou.</label><label><input type="radio" name="q8" value="hufflepuff"> Neřeším, hlavně že pomohl týmu.</label></div>
+<div class="question"><strong>9. Jak pracuješ pod tlakem?</strong><br><label><input type="radio" name="q9" value="gryffindor"> Líp než bez něj.</label><label><input type="radio" name="q9" value="ravenclaw"> Používám plánování a timeboxing.</label><label><input type="radio" name="q9" value="slytherin"> Ignoruju chaos kolem a jedu si svoje.</label><label><input type="radio" name="q9" value="hufflepuff"> Dělám krok po kroku, hlavně zůstat v klidu.</label></div>
+<div class="question"><strong>10. Když se mění priorita během dne:</strong><br><label><input type="radio" name="q10" value="gryffindor"> Přepnu se rychle.</label><label><input type="radio" name="q10" value="ravenclaw"> Znovu si přerovnám priority.</label><label><input type="radio" name="q10" value="slytherin"> Přizpůsobím plán, hlavně abych z toho vytěžil/a.</label><label><input type="radio" name="q10" value="hufflepuff"> Zajistím, že nikdo nezůstane pozadu.</label></div>
+<div class="question"><strong>11. Tvůj styl při brainstormingu:</strong><br><label><input type="radio" name="q11" value="gryffindor"> Nadhazuju nápady hned.</label><label><input type="radio" name="q11" value="ravenclaw"> Píšu si je potichu a pak vystoupím.</label><label><input type="radio" name="q11" value="slytherin"> Sleduju směr a posunu to chytře dál.</label><label><input type="radio" name="q11" value="hufflepuff"> Podporuju ostatní a propojuju jejich nápady.</label></div>
+<div class="question"><strong>12. Tvoje pozice v týmu (přirozeně):</strong><br><label><input type="radio" name="q12" value="gryffindor"> Tahoun nebo hlas rozumu.</label><label><input type="radio" name="q12" value="ravenclaw"> Tichý stratég v pozadí.</label><label><input type="radio" name="q12" value="slytherin"> Ten, co ví víc, než říká.</label><label><input type="radio" name="q12" value="hufflepuff"> Ten, koho se všichni ptají na pomoc.</label></div>
+<div class="question"><strong>13. Jak se chováš, když máš vše hotovo?</strong><br><label><input type="radio" name="q13" value="gryffindor"> Pomůžu ostatním nebo si najdu další výzvu.</label><label><input type="radio" name="q13" value="ravenclaw"> Předělám to tak, aby to bylo ještě lepší.</label><label><input type="radio" name="q13" value="slytherin"> Využiju volno pro přípravu na další věc.</label><label><input type="radio" name="q13" value="hufflepuff"> Zkontroluju práci ostatních, jen tak nenápadně.</label></div>
+<div class="question"><strong>14. Co tě nejvíc motivuje?</strong><br><label><input type="radio" name="q14" value="gryffindor"> Pocit, že dělám něco důležitého.</label><label><input type="radio" name="q14" value="ravenclaw"> Možnost růstu a učení.</label><label><input type="radio" name="q14" value="slytherin"> Osobní zisk nebo vliv.</label><label><input type="radio" name="q14" value="hufflepuff"> Pocit, že pomáhám ostatním.</label></div>
+<div class="question"><strong>15. Jak reaguješ na ticho v týmu?</strong><br><label><input type="radio" name="q15" value="gryffindor"> Naruším ho nějakým podnětem.</label><label><input type="radio" name="q15" value="ravenclaw"> Využiju ho ke koncentraci.</label><label><input type="radio" name="q15" value="slytherin"> Zkoumám, kdo mlčí a proč.</label><label><input type="radio" name="q15" value="hufflepuff"> Snažím se prolomit ho jemně.</label></div>
+<div class="question"><strong>16. Když nevíš, jak dál:</strong><br><label><input type="radio" name="q16" value="gryffindor"> Jdu metodou pokus-omyl.</label><label><input type="radio" name="q16" value="ravenclaw"> Studuju a hledám zdroje.</label><label><input type="radio" name="q16" value="slytherin"> Zeptám se strategicky, aby to vypadalo, že to vím.</label><label><input type="radio" name="q16" value="hufflepuff"> Požádám někoho, komu věřím.</label></div>
+<div class="question"><strong>17. Když někdo poruší pravidla:</strong><br><label><input type="radio" name="q17" value="gryffindor"> Napravím to, i kdybych měl/a jít proti proudu.</label><label><input type="radio" name="q17" value="ravenclaw"> Zajímá mě, proč – neodsuzuju hned.</label><label><input type="radio" name="q17" value="slytherin"> Sleduju, co tím získal.</label><label><input type="radio" name="q17" value="hufflepuff"> Mrzí mě to, ale snažím se chápat důvody.</label></div>
+<div class="question"><strong>18. Co tě napadne jako první při novém projektu?</strong><br><label><input type="radio" name="q18" value="gryffindor"> Do toho! Kdo, kde, co?</label><label><input type="radio" name="q18" value="ravenclaw"> Jaký je cíl a jaké máme podmínky?</label><label><input type="radio" name="q18" value="slytherin"> Kdo je klíčový a co z toho můžu vytěžit?</label><label><input type="radio" name="q18" value="hufflepuff"> Jak to udělat, aby to fungovalo pro všechny?</label></div>
+<div class="question"><strong>19. Tvoje skrytá superschopnost v práci:</strong><br><label><input type="radio" name="q19" value="gryffindor"> Zachráním situaci, když to nikdo jiný nedá.</label><label><input type="radio" name="q19" value="ravenclaw"> Vymyslím řešení, které nikdo nečekal.</label><label><input type="radio" name="q19" value="slytherin"> Ovlivním výsledek bez velkého rozruchu.</label><label><input type="radio" name="q19" value="hufflepuff"> Vytvářím atmosféru, kde se lidem dobře pracuje.</label></div>
+<div class="question"><strong>20. Jaký typ lidí tě nejvíc vyčerpává?</strong><br><label><input type="radio" name="q20" value="gryffindor"> Nečinnost a výmluvy.</label><label><input type="radio" name="q20" value="ravenclaw"> Povrchnost a chaos.</label><label><input type="radio" name="q20" value="slytherin"> Neupřímnost bez účelu.</label><label><input type="radio" name="q20" value="hufflepuff"> Agresivita a nespravedlnost.</label></div>
 
-    <div class="question">
-      <strong>1. Když se tým dostane do chaosu, co uděláš?</strong><br>
-      <label><input type="radio" name="q1" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q1" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q1" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q1" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>2. Tvůj styl psaní e-mailů:</strong><br>
-      <label><input type="radio" name="q2" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q2" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q2" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q2" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>3. Co tě nejvíc frustruje v týmu?</strong><br>
-      <label><input type="radio" name="q3" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q3" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q3" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q3" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>4. Když kolega nedodrží deadline:</strong><br>
-      <label><input type="radio" name="q4" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q4" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q4" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q4" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>5. Kdy jsi nejvíc ve svém živlu?</strong><br>
-      <label><input type="radio" name="q5" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q5" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q5" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q5" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>6. Jak reaguješ na nejasné zadání?</strong><br>
-      <label><input type="radio" name="q6" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q6" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q6" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q6" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>7. Tvoje reakce na kritiku?</strong><br>
-      <label><input type="radio" name="q7" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q7" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q7" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q7" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>8. Když někdo přebere tvůj nápad:</strong><br>
-      <label><input type="radio" name="q8" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q8" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q8" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q8" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>9. Jak pracuješ pod tlakem?</strong><br>
-      <label><input type="radio" name="q9" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q9" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q9" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q9" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>10. Když se mění priorita během dne:</strong><br>
-      <label><input type="radio" name="q10" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q10" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q10" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q10" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>11. Tvůj styl při brainstormingu:</strong><br>
-      <label><input type="radio" name="q11" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q11" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q11" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q11" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>12. Tvoje pozice v týmu (přirozeně):</strong><br>
-      <label><input type="radio" name="q12" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q12" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q12" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q12" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>13. Jak se chováš, když máš vše hotovo?</strong><br>
-      <label><input type="radio" name="q13" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q13" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q13" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q13" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>14. Co tě nejvíc motivuje?</strong><br>
-      <label><input type="radio" name="q14" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q14" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q14" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q14" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>15. Jak reaguješ na ticho v týmu?</strong><br>
-      <label><input type="radio" name="q15" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q15" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q15" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q15" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>16. Když nevíš, jak dál:</strong><br>
-      <label><input type="radio" name="q16" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q16" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q16" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q16" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>17. Když někdo poruší pravidla:</strong><br>
-      <label><input type="radio" name="q17" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q17" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q17" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q17" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>18. Co tě napadne jako první při novém projektu?</strong><br>
-      <label><input type="radio" name="q18" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q18" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q18" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q18" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>19. Tvoje skrytá superschopnost v práci:</strong><br>
-      <label><input type="radio" name="q19" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q19" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q19" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q19" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
-    <div class="question">
-      <strong>20. Jaký typ lidí tě nejvíc vyčerpává?</strong><br>
-      <label><input type="radio" name="q20" value="gryffindor"> a) Gryffindor-style odpověď</label>
-      <label><input type="radio" name="q20" value="ravenclaw"> b) Ravenclaw-style odpověď</label>
-      <label><input type="radio" name="q20" value="slytherin"> c) Slytherin-style odpověď</label>
-      <label><input type="radio" name="q20" value="hufflepuff"> d) Hufflepuff-style odpověď</label>
-    </div>
-    
     <button type="button" onclick="calculateHouse()">Zjisti svou kolej 🪄</button>
   </form>
   <div id="result"></div>
