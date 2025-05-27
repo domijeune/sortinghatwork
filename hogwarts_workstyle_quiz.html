@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hogwarts Workstyle Quiz</title>
+  <style>
+    body { font-family: 'Segoe UI', sans-serif; padding: 30px; background-color: #f0f2f5; color: #333; }
+    h1 { color: #4b4b9f; }
+    .question { margin-top: 20px; }
+    label { display: block; margin: 5px 0; }
+    button { margin-top: 30px; padding: 10px 20px; font-size: 16px; }
+    #result { margin-top: 30px; font-size: 18px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h1>🧙‍♀️ Hogwarts Workstyle Quiz 🧠</h1>
+  <form id="quizForm">
+    <div class="question">
+      <strong>1. Když se objeví urgentní úkol v pátek odpoledne…</strong><br>
+      <label><input type="radio" name="q1" value="gryffindor"> a) Jdu na to – někdo to musí zachránit</label>
+      <label><input type="radio" name="q1" value="slytherin"> b) Počkám, sleduju vývoj… takticky</label>
+      <label><input type="radio" name="q1" value="ravenclaw"> c) Navrhnu systém nebo plán</label>
+      <label><input type="radio" name="q1" value="hufflepuff"> d) Udělám to, ale budu celý víkend vtipkovat</label>
+    </div>
+
+    <div class="question">
+      <strong>2. Jak funguješ ve skupině?</strong><br>
+      <label><input type="radio" name="q2" value="gryffindor"> a) Přirozený leader</label>
+      <label><input type="radio" name="q2" value="hufflepuff"> b) Pomáhám, ale necpu se dopředu</label>
+      <label><input type="radio" name="q2" value="ravenclaw"> c) Sleduju, pak přispěju promyšleně</label>
+      <label><input type="radio" name="q2" value="slytherin"> d) Dělám po svém a doufám, že mě nechají být</label>
+    </div>
+
+    <div class="question">
+      <strong>3. Motivuje tě nejvíc:</strong><br>
+      <label><input type="radio" name="q3" value="gryffindor"> a) Výzva a ukázat, co ve mně je</label>
+      <label><input type="radio" name="q3" value="slytherin"> b) Uznání od správných lidí</label>
+      <label><input type="radio" name="q3" value="ravenclaw"> c) Tvořit něco hodnotného</label>
+      <label><input type="radio" name="q3" value="hufflepuff"> d) Klid a prostor</label>
+    </div>
+
+    <div class="question">
+      <strong>4. Když se něco pokazí…</strong><br>
+      <label><input type="radio" name="q4" value="gryffindor"> a) Vezmu zodpovědnost a hledám řešení</label>
+      <label><input type="radio" name="q4" value="slytherin"> b) Vím, koho se zeptat</label>
+      <label><input type="radio" name="q4" value="ravenclaw"> c) Zanalýzuju příčinu a nastavím prevenci</label>
+      <label><input type="radio" name="q4" value="hufflepuff"> d) Okecám to, ale opravím</label>
+    </div>
+
+    <div class="question">
+      <strong>5. Tvůj přístup ke konfliktům:</strong><br>
+      <label><input type="radio" name="q5" value="gryffindor"> a) Jdu do toho, když jde o princip</label>
+      <label><input type="radio" name="q5" value="slytherin"> b) Diplomacie je klíč</label>
+      <label><input type="radio" name="q5" value="ravenclaw"> c) Snažím se pochopit všechny</label>
+      <label><input type="radio" name="q5" value="hufflepuff"> d) Vyčerpám se v tichu a jdu pohladit kočku</label>
+    </div>
+
+    <div class="question">
+      <strong>6. V týmu jsi často:</strong><br>
+      <label><input type="radio" name="q6" value="gryffindor"> a) Tahoun</label>
+      <label><input type="radio" name="q6" value="slytherin"> b) Strateg</label>
+      <label><input type="radio" name="q6" value="ravenclaw"> c) Mozek v pozadí</label>
+      <label><input type="radio" name="q6" value="hufflepuff"> d) Nápadový duch s chaosem</label>
+    </div>
+
+    <button type="button" onclick="calculateHouse()">Zjisti svou kolej 🪄</button>
+  </form>
+
+  <div id="result"></div>
+
+  <script>
+    function calculateHouse() {
+      const form = document.getElementById("quizForm");
+      const answers = new FormData(form);
+      const scores = { gryffindor: 0, slytherin: 0, ravenclaw: 0, hufflepuff: 0 };
+
+      for (let entry of answers.values()) {
+        scores[entry]++;
+      }
+
+      let house = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+
+      let descriptions = {
+        gryffindor: "🦁 **Nebuďme skromní – jsi Gryf. Vedoucí typ, který říká věci nahlas, a někdy až moc. Diagnóza: HR volá, ale zároveň tě obdivuje.**",
+        slytherin: "🐍 **Zmijozel. Chladná hlava, dlouhodobý plán a občas lehké vražedné charisma. Diagnóza: Nepij s nikým, kdo tě chce povýšit.**",
+        ravenclaw: "🦅 **Havraspár. Mozek týmu, poznámky všude, chaos elegantně uspořádán. Diagnóza: introvertní operátor reality.**",
+        hufflepuff: "🦡 **Mrzimor. Duše týmu, tichý dříč a morální kompas. Diagnóza: v práci tě milují, doma jsi zavalen dekou a kočkou.**"
+      };
+
+      document.getElementById("result").innerHTML = descriptions[house];
+    }
+  </script>
+</body>
+</html>
